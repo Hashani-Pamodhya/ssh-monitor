@@ -1,10 +1,238 @@
-Oct  2 10:15:01 server sshd[1234]: Failed password for root from 203.0.113.5 port 54321 ssh2
-Oct  2 10:15:03 server sshd[1234]: Failed password for root from 203.0.113.5 port 54322 ssh2
-Oct  2 10:15:05 server sshd[1234]: Failed password for invalid user admin from 203.0.113.5 port 54323 ssh2
-Oct  2 10:15:07 server sshd[1234]: Failed password for invalid user test from 203.0.113.5 port 54324 ssh2
-Oct  2 10:15:09 server sshd[1234]: Failed password for invalid user oracle from 203.0.113.5 port 54325 ssh2
-Oct  2 10:15:11 server sshd[1234]: Failed password for root from 203.0.113.5 port 54326 ssh2
-Oct  2 10:20:00 server sshd[1240]: Failed password for hashani from 198.51.100.7 port 50000 ssh2
-Oct  2 10:22:00 server sshd[1241]: Accepted password for hashani from 198.51.100.7 port 50001 ssh2
-Oct  2 11:00:00 server sshd[1250]: Failed password for ubuntu from 192.0.2.44 port 40000 ssh2
-Oct  2 11:00:02 server sshd[1250]: Failed password for pi from 192.0.2.44 port 40001 ssh2
+2026-10-03T14:07:19.654812+05:30 Hashani systemd-logind[185]: New seat seat0.
+2026-10-03T14:07:48.390178+05:30 Hashani groupadd[492]: group added to /etc/group: name=acer, GID=1000
+2026-10-03T14:07:48.401283+05:30 Hashani groupadd[492]: group added to /etc/gshadow: name=acer
+2026-10-03T14:07:48.402120+05:30 Hashani groupadd[492]: new group: name=acer, GID=1000
+2026-10-03T14:07:48.489769+05:30 Hashani useradd[497]: new user: name=acer, UID=1000, GID=1000, home=/home/acer, shell=/bin/bash, from=/dev/pts/0
+2026-10-03T14:08:02.822827+05:30 Hashani passwd[508]: pam_unix(passwd:chauthtok): password changed for acer
+2026-10-03T14:08:02.845942+05:30 Hashani gpasswd[518]: members of group users set by root to acer
+2026-10-03T14:08:02.857603+05:30 Hashani usermod[522]: add 'acer' to group 'adm'
+2026-10-03T14:08:02.857698+05:30 Hashani usermod[522]: add 'acer' to group 'cdrom'
+2026-10-03T14:08:02.857721+05:30 Hashani usermod[522]: add 'acer' to group 'sudo'
+2026-10-03T14:08:02.857763+05:30 Hashani usermod[522]: add 'acer' to group 'dip'
+2026-10-03T14:08:02.857782+05:30 Hashani usermod[522]: add 'acer' to group 'plugdev'
+2026-10-03T14:08:02.857805+05:30 Hashani usermod[522]: add 'acer' to shadow group 'adm'
+2026-10-03T14:08:02.857827+05:30 Hashani usermod[522]: add 'acer' to shadow group 'cdrom'
+2026-10-03T14:08:02.857845+05:30 Hashani usermod[522]: add 'acer' to shadow group 'sudo'
+2026-10-03T14:08:02.857862+05:30 Hashani usermod[522]: add 'acer' to shadow group 'dip'
+2026-10-03T14:08:02.857878+05:30 Hashani usermod[522]: add 'acer' to shadow group 'plugdev'
+2026-10-03T14:08:02.890301+05:30 Hashani su[541]: (to acer) root on pts/0
+2026-10-03T14:08:02.892029+05:30 Hashani su[541]: pam_unix(su:session): session opened for user acer(uid=1000) by (uid=0)
+2026-10-03T14:08:02.934422+05:30 Hashani systemd-logind[185]: New session 'c1' of user 'acer' with class 'user' and type 'tty'.
+2026-10-03T14:08:02.951415+05:30 Hashani (systemd): pam_unix(systemd-user:session): session opened for user acer(uid=1000) by acer(uid=0)
+2026-10-03T14:08:02.952329+05:30 Hashani systemd-logind[185]: New session 'c2' of user 'acer' with class 'manager' and type 'unspecified'.
+2026-10-03T14:08:03.117691+05:30 Hashani su[541]: pam_unix(su:session): session closed for user acer
+2026-10-03T14:08:03.121000+05:30 Hashani systemd-logind[185]: Session c1 logged out. Waiting for processes to exit.
+2026-10-03T14:08:03.121845+05:30 Hashani systemd-logind[185]: Removed session c1.
+2026-10-03T14:08:13.441327+05:30 Hashani (sd-pam): pam_unix(systemd-user:session): session closed for user acer
+2026-10-03T14:08:13.441980+05:30 Hashani systemd-logind[185]: Removed session c2.
+2026-10-03T14:08:21.579816+05:30 Hashani su[625]: (to acer) root on pts/0
+2026-10-03T14:08:21.580581+05:30 Hashani su[625]: pam_unix(su:session): session opened for user acer(uid=1000) by (uid=0)
+2026-10-03T14:08:21.590642+05:30 Hashani systemd-logind[185]: New session 'c3' of user 'acer' with class 'user' and type 'tty'.
+2026-10-03T14:08:21.661104+05:30 Hashani (systemd): pam_unix(systemd-user:session): session opened for user acer(uid=1000) by acer(uid=0)
+2026-10-03T14:08:21.662807+05:30 Hashani systemd-logind[185]: New session 'c4' of user 'acer' with class 'manager' and type 'unspecified'.
+2026-10-03T14:08:21.789585+05:30 Hashani su[625]: pam_unix(su:session): session closed for user acer
+2026-10-03T14:08:21.791925+05:30 Hashani systemd-logind[185]: Session c3 logged out. Waiting for processes to exit.
+2026-10-03T14:08:21.795640+05:30 Hashani su[666]: (to acer) root on pts/0
+2026-10-03T14:08:21.796503+05:30 Hashani su[666]: pam_unix(su:session): session opened for user acer(uid=1000) by (uid=0)
+2026-10-03T14:08:21.799420+05:30 Hashani systemd-logind[185]: New session 'c5' of user 'acer' with class 'user' and type 'tty'.
+2026-10-03T14:08:21.801617+05:30 Hashani systemd-logind[185]: Removed session c3.
+2026-10-03T14:08:21.808641+05:30 Hashani su[666]: pam_unix(su:session): session closed for user acer
+2026-10-03T14:08:21.810396+05:30 Hashani systemd-logind[185]: Session c5 logged out. Waiting for processes to exit.
+2026-10-03T14:08:21.813812+05:30 Hashani su[684]: (to acer) root on pts/0
+2026-10-03T14:08:21.814340+05:30 Hashani su[684]: pam_unix(su:session): session opened for user acer(uid=1000) by (uid=0)
+2026-10-03T14:08:21.817147+05:30 Hashani systemd-logind[185]: New session 'c6' of user 'acer' with class 'user' and type 'tty'.
+2026-10-03T14:08:21.818370+05:30 Hashani systemd-logind[185]: Removed session c5.
+2026-10-03T14:08:21.825400+05:30 Hashani su[684]: pam_unix(su:session): session closed for user acer
+2026-10-03T14:08:21.827216+05:30 Hashani systemd-logind[185]: Session c6 logged out. Waiting for processes to exit.
+2026-10-03T14:08:21.836111+05:30 Hashani systemd-logind[185]: Removed session c6.
+2026-10-03T14:08:22.257745+05:30 Hashani su[699]: (to acer) root on pts/0
+2026-10-03T14:08:22.258404+05:30 Hashani su[699]: pam_unix(su:session): session opened for user acer(uid=1000) by (uid=0)
+2026-10-03T14:08:22.260684+05:30 Hashani systemd-logind[185]: New session 'c7' of user 'acer' with class 'user' and type 'tty'.
+2026-10-03T14:08:22.687223+05:30 Hashani su[699]: pam_unix(su:session): session closed for user acer
+2026-10-03T14:08:22.691029+05:30 Hashani systemd-logind[185]: Session c7 logged out. Waiting for processes to exit.
+2026-10-03T14:08:22.692601+05:30 Hashani systemd-logind[185]: Removed session c7.
+2026-10-03T14:08:22.693882+05:30 Hashani su[739]: (to acer) root on pts/0
+2026-10-03T14:08:22.694428+05:30 Hashani su[739]: pam_unix(su:session): session opened for user acer(uid=1000) by (uid=0)
+2026-10-03T14:08:22.696768+05:30 Hashani systemd-logind[185]: New session 'c8' of user 'acer' with class 'user' and type 'tty'.
+2026-10-03T14:08:22.718210+05:30 Hashani su[739]: pam_unix(su:session): session closed for user acer
+2026-10-03T14:08:22.721089+05:30 Hashani systemd-logind[185]: Session c8 logged out. Waiting for processes to exit.
+2026-10-03T14:08:23.077603+05:30 Hashani login: pam_unix(login:session): session opened for user acer(uid=1000) by acer(uid=0)
+2026-10-03T14:08:23.080095+05:30 Hashani systemd-logind[185]: New session 'c9' of user 'acer' with class 'user' and type 'tty'.
+2026-10-03T14:08:25.051075+05:30 Hashani systemd-logind[185]: Removed session c8.
+2026-10-03T14:09:59.780217+05:30 Hashani systemd-logind[185]: The system will power off now!
+2026-10-03T14:09:59.820258+05:30 Hashani systemd-logind[185]: System is powering down.
+2026-10-03T14:09:59.830017+05:30 Hashani login: pam_unix(login:session): session closed for user acer
+2026-10-05T10:07:00.523235+05:30 Hashani systemd-logind[167]: New seat seat0.
+2026-10-05T10:07:03.289860+05:30 Hashani login: pam_unix(login:session): session opened for user acer(uid=1000) by acer(uid=0)
+2026-10-05T10:07:03.301152+05:30 Hashani systemd-logind[167]: New session 'c1' of user 'acer' with class 'user' and type 'tty'.
+2026-10-05T10:07:03.363862+05:30 Hashani (systemd): pam_unix(systemd-user:session): session opened for user acer(uid=1000) by acer(uid=0)
+2026-10-05T10:07:03.365104+05:30 Hashani systemd-logind[167]: New session 'c2' of user 'acer' with class 'manager' and type 'unspecified'.
+2026-10-05T10:07:51.105088+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-05T10:07:51.105517+05:30 Hashani sudo: acer : TTY=/dev/pts/0 ; PWD=/mnt/c/Users/Acer ; USER=root ; COMMAND=/usr/bin/apt update
+2026-10-05T10:08:07.524362+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T10:08:18.964234+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-05T10:08:18.964345+05:30 Hashani sudo: acer : TTY=/dev/pts/0 ; PWD=/mnt/c/Users/Acer ; USER=root ; COMMAND=/usr/bin/apt install openssh-server
+2026-10-05T10:08:32.302230+05:30 Hashani (systemd-stdio-bridge): pam_unix(login:session): session opened for user acer(uid=1000) by acer(uid=0)
+2026-10-05T10:08:32.475450+05:30 Hashani (sd-pam): pam_unix(login:session): session closed for user acer
+2026-10-05T10:08:38.384656+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T10:13:11.297566+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-05T10:13:11.297997+05:30 Hashani sudo: acer : TTY=/dev/pts/0 ; PWD=/mnt/c/Users/Acer ; USER=root ; COMMAND=/usr/sbin/service ssh start
+2026-10-05T10:13:11.871417+05:30 Hashani sshd[1254]: Server listening on 0.0.0.0 port 22.
+2026-10-05T10:13:11.871658+05:30 Hashani sshd[1254]: Server listening on :: port 22.
+2026-10-05T10:13:11.873336+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T10:13:25.597736+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-05T10:13:25.597937+05:30 Hashani sudo: acer : TTY=/dev/pts/0 ; PWD=/mnt/c/Users/Acer ; USER=root ; COMMAND=/usr/sbin/service ssh status
+2026-10-05T10:15:55.502612+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T10:17:01.171163+05:30 Hashani CRON[1322]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-05T10:17:01.176947+05:30 Hashani CRON[1322]: pam_unix(cron:session): session closed for user root
+2026-10-05T10:20:36.443684+05:30 Hashani sshd-session[1347]: Accepted password for acer from 172.18.240.1 port 54740 ssh2
+2026-10-05T10:20:36.446327+05:30 Hashani sshd-session[1347]: pam_unix(sshd:session): session opened for user acer(uid=1000) by acer(uid=0)
+2026-10-05T10:20:36.506835+05:30 Hashani systemd-logind[167]: New session 'c4' of user 'acer' with class 'user' and type 'tty'.
+2026-10-05T10:37:41.938144+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by acer(uid=1000)
+2026-10-05T10:37:41.973850+05:30 Hashani sudo: acer : TTY=/dev/pts/2 ; PWD=/home/acer ; USER=root ; COMMAND=/usr/bin/apt install hydra
+2026-10-05T10:39:06.808816+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T11:00:30.729759+05:30 Hashani sshd-session[1347]: syslogin_perform_logout: logout() returned an error
+2026-10-05T11:00:31.109391+05:30 Hashani sshd-session[1385]: Received disconnect from 172.18.240.1 port 54740:11: disconnected by user
+2026-10-05T11:00:31.245600+05:30 Hashani sshd-session[1385]: Disconnected from user acer 172.18.240.1 port 54740
+2026-10-05T11:00:31.254940+05:30 Hashani sshd-session[1347]: pam_unix(sshd:session): session closed for user acer
+2026-10-05T11:00:31.271217+05:30 Hashani systemd-logind[167]: Session c4 logged out. Waiting for processes to exit.
+2026-10-05T11:00:31.273209+05:30 Hashani systemd-logind[167]: Removed session c4.
+2026-10-05T11:04:39.830683+05:30 Hashani sshd-session[2143]: Received disconnect from 172.18.240.1 port 54755:11: Bye Bye [preauth]
+2026-10-05T11:04:39.842640+05:30 Hashani sshd-session[2143]: Disconnected from authenticating user acer 172.18.240.1 port 54755 [preauth]
+2026-10-05T11:04:40.405114+05:30 Hashani unix_chkpwd[2147]: password check failed for user (acer)
+2026-10-05T11:04:40.407900+05:30 Hashani sshd-session[2145]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.240.1  user=acer
+2026-10-05T11:04:42.140864+05:30 Hashani sshd-session[2145]: Failed password for acer from 172.18.240.1 port 54756 ssh2
+2026-10-05T11:04:42.411650+05:30 Hashani unix_chkpwd[2148]: password check failed for user (acer)
+2026-10-05T11:04:44.676587+05:30 Hashani sshd-session[2145]: Failed password for acer from 172.18.240.1 port 54756 ssh2
+2026-10-05T11:04:46.260934+05:30 Hashani unix_chkpwd[2149]: password check failed for user (acer)
+2026-10-05T11:04:48.149404+05:30 Hashani sshd-session[2145]: Failed password for acer from 172.18.240.1 port 54756 ssh2
+2026-10-05T11:04:48.205458+05:30 Hashani unix_chkpwd[2150]: password check failed for user (acer)
+2026-10-05T11:04:50.542377+05:30 Hashani sshd-session[2145]: Failed password for acer from 172.18.240.1 port 54756 ssh2
+2026-10-05T11:04:52.179552+05:30 Hashani sshd-session[2145]: Connection closed by authenticating user acer 172.18.240.1 port 54756 [preauth]
+2026-10-05T11:04:52.214706+05:30 Hashani sshd-session[2145]: PAM 3 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.240.1  user=acer
+2026-10-05T11:04:52.215762+05:30 Hashani sshd-session[2145]: PAM service(sshd) ignoring max retries; 4 > 3
+2026-10-05T11:16:14.725991+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-05T11:16:14.738487+05:30 Hashani sudo: acer : TTY=/dev/pts/0 ; PWD=/mnt/c/Users/Acer ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log
+2026-10-05T11:16:14.739068+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T11:17:01.496574+05:30 Hashani CRON[2262]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-05T11:17:01.514454+05:30 Hashani CRON[2262]: pam_unix(cron:session): session closed for user root
+2026-10-05T11:24:15.736570+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-05T11:24:15.749514+05:30 Hashani sudo: acer : TTY=/dev/pts/0 ; PWD=/mnt/c/Users/Acer ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /tmp/auth.log
+2026-10-05T11:24:15.757795+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T11:26:35.482980+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-05T11:26:35.484170+05:30 Hashani sudo: acer : TTY=/dev/pts/0 ; PWD=/mnt/c/Users/Acer ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /tmp/auth.log
+2026-10-05T11:26:35.492363+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T11:26:42.782763+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-05T11:26:42.783944+05:30 Hashani sudo: acer : TTY=/dev/pts/0 ; PWD=/mnt/c/Users/Acer ; USER=root ; COMMAND=/usr/bin/cp /tmp/auth.log /mnt/c/Users/Acer/ssh-monitor/sample_logs/auth.log
+2026-10-05T11:26:42.814046+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T11:34:11.873695+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-05T11:34:11.886805+05:30 Hashani sudo: acer : TTY=/dev/pts/0 ; PWD=/mnt/c/Users/Acer ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /tmp/auth.log
+2026-10-05T11:34:11.887562+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T11:34:39.827774+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-05T11:34:39.829333+05:30 Hashani sudo: acer : TTY=/dev/pts/0 ; PWD=/mnt/c/Users/Acer ; USER=root ; COMMAND=/usr/bin/cp /tmp/auth.log /mnt/c/Users/Acer/ssh-monitor/sample_logs/auth.log
+2026-10-05T11:34:39.856569+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T12:17:01.690926+05:30 Hashani CRON[2960]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-05T12:17:01.718149+05:30 Hashani CRON[2960]: pam_unix(cron:session): session closed for user root
+2026-10-05T16:17:01.671922+05:30 Hashani CRON[3233]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-05T16:17:01.697122+05:30 Hashani CRON[3233]: pam_unix(cron:session): session closed for user root
+2026-10-05T16:19:09.811444+05:30 Hashani sshd-session[3241]: Accepted password for acer from 172.18.240.1 port 50654 ssh2
+2026-10-05T16:19:09.818790+05:30 Hashani sshd-session[3241]: pam_unix(sshd:session): session opened for user acer(uid=1000) by acer(uid=0)
+2026-10-05T16:19:09.956061+05:30 Hashani systemd-logind[167]: New session 'c5' of user 'acer' with class 'user' and type 'tty'.
+2026-10-05T16:22:23.988418+05:30 Hashani sshd-session[3367]: Received disconnect from 172.18.247.45 port 48134:11: Bye Bye [preauth]
+2026-10-05T16:22:23.993527+05:30 Hashani sshd-session[3367]: Disconnected from authenticating user acer 172.18.247.45 port 48134 [preauth]
+2026-10-05T16:22:24.354606+05:30 Hashani unix_chkpwd[3372]: password check failed for user (acer)
+2026-10-05T16:22:24.358144+05:30 Hashani sshd-session[3370]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.247.45  user=acer
+2026-10-05T16:22:26.244340+05:30 Hashani sshd-session[3370]: Failed password for acer from 172.18.247.45 port 48136 ssh2
+2026-10-05T16:22:26.351098+05:30 Hashani unix_chkpwd[3373]: password check failed for user (acer)
+2026-10-05T16:22:27.983367+05:30 Hashani sshd-session[3370]: Failed password for acer from 172.18.247.45 port 48136 ssh2
+2026-10-05T16:22:28.383275+05:30 Hashani unix_chkpwd[3374]: password check failed for user (acer)
+2026-10-05T16:22:30.587497+05:30 Hashani sshd-session[3370]: Failed password for acer from 172.18.247.45 port 48136 ssh2
+2026-10-05T16:22:32.372187+05:30 Hashani unix_chkpwd[3375]: password check failed for user (acer)
+2026-10-05T16:22:34.587097+05:30 Hashani sshd-session[3370]: Failed password for acer from 172.18.247.45 port 48136 ssh2
+2026-10-05T16:22:36.416220+05:30 Hashani unix_chkpwd[3376]: password check failed for user (acer)
+2026-10-05T16:22:38.409831+05:30 Hashani sshd-session[3370]: Failed password for acer from 172.18.247.45 port 48136 ssh2
+2026-10-05T16:22:40.439293+05:30 Hashani unix_chkpwd[3402]: password check failed for user (acer)
+2026-10-05T16:22:42.288467+05:30 Hashani sshd-session[3370]: Failed password for acer from 172.18.247.45 port 48136 ssh2
+2026-10-05T16:22:42.340855+05:30 Hashani sshd-session[3370]: error: maximum authentication attempts exceeded for acer from 172.18.247.45 port 48136 ssh2 [preauth]
+2026-10-05T16:22:42.341377+05:30 Hashani sshd-session[3370]: Disconnecting authenticating user acer 172.18.247.45 port 48136: Too many authentication failures [preauth]
+2026-10-05T16:22:42.342575+05:30 Hashani sshd-session[3370]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.247.45  user=acer
+2026-10-05T16:22:42.342849+05:30 Hashani sshd-session[3370]: PAM service(sshd) ignoring max retries; 6 > 3
+2026-10-05T16:22:42.687504+05:30 Hashani unix_chkpwd[3405]: password check failed for user (acer)
+2026-10-05T16:22:42.692538+05:30 Hashani sshd-session[3403]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.247.45  user=acer
+2026-10-05T16:22:45.048008+05:30 Hashani sshd-session[3403]: Failed password for acer from 172.18.247.45 port 59902 ssh2
+2026-10-05T16:22:46.724891+05:30 Hashani unix_chkpwd[3408]: password check failed for user (acer)
+2026-10-05T16:22:48.614070+05:30 Hashani sshd-session[3403]: Failed password for acer from 172.18.247.45 port 59902 ssh2
+2026-10-05T16:22:48.693960+05:30 Hashani unix_chkpwd[3409]: password check failed for user (acer)
+2026-10-05T16:22:50.819581+05:30 Hashani sshd-session[3403]: Failed password for acer from 172.18.247.45 port 59902 ssh2
+2026-10-05T16:22:52.735723+05:30 Hashani unix_chkpwd[3410]: password check failed for user (acer)
+2026-10-05T16:22:54.797852+05:30 Hashani sshd-session[3403]: Failed password for acer from 172.18.247.45 port 59902 ssh2
+2026-10-05T16:22:56.704739+05:30 Hashani unix_chkpwd[3411]: password check failed for user (acer)
+2026-10-05T16:22:58.696181+05:30 Hashani sshd-session[3403]: Failed password for acer from 172.18.247.45 port 59902 ssh2
+2026-10-05T16:23:00.727554+05:30 Hashani unix_chkpwd[3412]: password check failed for user (acer)
+2026-10-05T16:23:03.075560+05:30 Hashani sshd-session[3403]: Failed password for acer from 172.18.247.45 port 59902 ssh2
+2026-10-05T16:23:04.679669+05:30 Hashani sshd-session[3403]: error: maximum authentication attempts exceeded for acer from 172.18.247.45 port 59902 ssh2 [preauth]
+2026-10-05T16:23:04.681297+05:30 Hashani sshd-session[3403]: Disconnecting authenticating user acer 172.18.247.45 port 59902: Too many authentication failures [preauth]
+2026-10-05T16:23:04.681742+05:30 Hashani sshd-session[3403]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.247.45  user=acer
+2026-10-05T16:23:04.682507+05:30 Hashani sshd-session[3403]: PAM service(sshd) ignoring max retries; 6 > 3
+2026-10-05T16:23:04.844789+05:30 Hashani unix_chkpwd[3415]: password check failed for user (acer)
+2026-10-05T16:23:04.845981+05:30 Hashani sshd-session[3413]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.247.45  user=acer
+2026-10-05T16:23:06.330843+05:30 Hashani sshd-session[3413]: Failed password for acer from 172.18.247.45 port 57386 ssh2
+2026-10-05T16:23:06.830591+05:30 Hashani unix_chkpwd[3418]: password check failed for user (acer)
+2026-10-05T16:23:08.779254+05:30 Hashani sshd-session[3413]: Failed password for acer from 172.18.247.45 port 57386 ssh2
+2026-10-05T16:23:10.839143+05:30 Hashani unix_chkpwd[3419]: password check failed for user (acer)
+2026-10-05T16:23:13.247239+05:30 Hashani sshd-session[3413]: Failed password for acer from 172.18.247.45 port 57386 ssh2
+2026-10-05T16:23:14.838160+05:30 Hashani unix_chkpwd[3420]: password check failed for user (acer)
+2026-10-05T16:23:16.693807+05:30 Hashani sshd-session[3413]: Failed password for acer from 172.18.247.45 port 57386 ssh2
+2026-10-05T16:23:16.940844+05:30 Hashani unix_chkpwd[3421]: password check failed for user (acer)
+2026-10-05T16:23:18.917190+05:30 Hashani sshd-session[3413]: Failed password for acer from 172.18.247.45 port 57386 ssh2
+2026-10-05T16:23:20.856803+05:30 Hashani unix_chkpwd[3424]: password check failed for user (acer)
+2026-10-05T16:23:22.709168+05:30 Hashani sshd-session[3413]: Failed password for acer from 172.18.247.45 port 57386 ssh2
+2026-10-05T16:23:22.809401+05:30 Hashani sshd-session[3413]: error: maximum authentication attempts exceeded for acer from 172.18.247.45 port 57386 ssh2 [preauth]
+2026-10-05T16:23:22.810347+05:30 Hashani sshd-session[3413]: Disconnecting authenticating user acer 172.18.247.45 port 57386: Too many authentication failures [preauth]
+2026-10-05T16:23:22.811774+05:30 Hashani sshd-session[3413]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.247.45  user=acer
+2026-10-05T16:23:22.811987+05:30 Hashani sshd-session[3413]: PAM service(sshd) ignoring max retries; 6 > 3
+2026-10-05T16:23:22.947944+05:30 Hashani unix_chkpwd[3427]: password check failed for user (acer)
+2026-10-05T16:23:22.951072+05:30 Hashani sshd-session[3425]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.247.45  user=acer
+2026-10-05T16:23:24.724663+05:30 Hashani sshd-session[3425]: Failed password for acer from 172.18.247.45 port 48824 ssh2
+2026-10-05T16:23:24.943320+05:30 Hashani unix_chkpwd[3428]: password check failed for user (acer)
+2026-10-05T16:23:27.041946+05:30 Hashani sshd-session[3425]: Failed password for acer from 172.18.247.45 port 48824 ssh2
+2026-10-05T16:23:28.945909+05:30 Hashani unix_chkpwd[3429]: password check failed for user (acer)
+2026-10-05T16:23:31.195959+05:30 Hashani sshd-session[3425]: Failed password for acer from 172.18.247.45 port 48824 ssh2
+2026-10-05T16:23:32.961046+05:30 Hashani unix_chkpwd[3430]: password check failed for user (acer)
+2026-10-05T16:23:34.668353+05:30 Hashani sshd-session[3425]: Failed password for acer from 172.18.247.45 port 48824 ssh2
+2026-10-05T16:23:34.968256+05:30 Hashani unix_chkpwd[3431]: password check failed for user (acer)
+2026-10-05T16:23:37.195565+05:30 Hashani sshd-session[3425]: Failed password for acer from 172.18.247.45 port 48824 ssh2
+2026-10-05T16:23:39.016241+05:30 Hashani unix_chkpwd[3432]: password check failed for user (acer)
+2026-10-05T16:23:41.447128+05:30 Hashani sshd-session[3425]: Failed password for acer from 172.18.247.45 port 48824 ssh2
+2026-10-05T16:23:42.938554+05:30 Hashani sshd-session[3425]: error: maximum authentication attempts exceeded for acer from 172.18.247.45 port 48824 ssh2 [preauth]
+2026-10-05T16:23:43.010788+05:30 Hashani sshd-session[3425]: Disconnecting authenticating user acer 172.18.247.45 port 48824: Too many authentication failures [preauth]
+2026-10-05T16:23:43.011043+05:30 Hashani sshd-session[3425]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.247.45  user=acer
+2026-10-05T16:23:43.011722+05:30 Hashani sshd-session[3425]: PAM service(sshd) ignoring max retries; 6 > 3
+2026-10-05T16:23:43.166992+05:30 Hashani unix_chkpwd[3435]: password check failed for user (acer)
+2026-10-05T16:23:43.170426+05:30 Hashani sshd-session[3433]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.247.45  user=acer
+2026-10-05T16:23:44.945931+05:30 Hashani sshd-session[3433]: Failed password for acer from 172.18.247.45 port 34210 ssh2
+2026-10-05T16:23:45.158563+05:30 Hashani unix_chkpwd[3438]: password check failed for user (acer)
+2026-10-05T16:23:47.325817+05:30 Hashani sshd-session[3433]: Failed password for acer from 172.18.247.45 port 34210 ssh2
+2026-10-05T16:23:49.157874+05:30 Hashani unix_chkpwd[3439]: password check failed for user (acer)
+2026-10-05T16:23:51.175502+05:30 Hashani sshd-session[3433]: Failed password for acer from 172.18.247.45 port 34210 ssh2
+2026-10-05T16:23:53.234766+05:30 Hashani unix_chkpwd[3440]: password check failed for user (acer)
+2026-10-05T16:23:55.896551+05:30 Hashani sshd-session[3433]: Failed password for acer from 172.18.247.45 port 34210 ssh2
+2026-10-05T16:23:57.166221+05:30 Hashani sshd-session[3433]: Connection closed by authenticating user acer 172.18.247.45 port 34210 [preauth]
+2026-10-05T16:23:57.166775+05:30 Hashani sshd-session[3433]: PAM 3 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.247.45  user=acer
+2026-10-05T16:23:57.167887+05:30 Hashani sshd-session[3433]: PAM service(sshd) ignoring max retries; 4 > 3
+2026-10-05T16:25:49.373219+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by acer(uid=1000)
+2026-10-05T16:25:49.441341+05:30 Hashani sudo: acer : TTY=/dev/pts/2 ; PWD=/home/acer ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log
+2026-10-05T16:25:49.447359+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T16:26:21.987076+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by acer(uid=1000)
+2026-10-05T16:26:21.988714+05:30 Hashani sudo: acer : TTY=/dev/pts/2 ; PWD=/home/acer ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log
+2026-10-05T16:26:21.994425+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T16:27:48.287756+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by acer(uid=1000)
+2026-10-05T16:27:48.296885+05:30 Hashani sudo: acer : TTY=/dev/pts/2 ; PWD=/home/acer ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log
+2026-10-05T16:27:48.304017+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T16:30:42.001877+05:30 Hashani unix_chkpwd[3545]: password check failed for user (acer)
+2026-10-05T16:30:42.005737+05:30 Hashani sudo: pam_unix(sudo:auth): authentication failure; logname= uid=1000 euid=0 tty=/dev/pts/0 ruser=acer rhost=  user=acer
+2026-10-05T16:30:52.440313+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-05T16:30:52.463207+05:30 Hashani sudo: acer : TTY=/dev/pts/0 ; PWD=/mnt/c/Users/Acer ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /mnt/c/Users/Acer/ssh-monitor/sample_logs/auth.log
+2026-10-05T16:30:52.543330+05:30 Hashani sudo: pam_unix(sudo:session): session closed for user root
+2026-10-05T16:33:14.891114+05:30 Hashani sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-05T16:33:14.892248+05:30 Hashani sudo: acer : TTY=/dev/pts/0 ; PWD=/mnt/c/Users/Acer ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /mnt/c/Users/Acer/ssh-monitor/sample_logs/auth.log

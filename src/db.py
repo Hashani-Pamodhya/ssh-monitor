@@ -16,7 +16,8 @@ def create_tables(conn):
                 ts TIMESTAMP NOT NULL,
                 ip TEXT NOT NULL,
                 username TEXT,
-                status TEXT NOT NULL
+                status TEXT NOT NULL,
+                UNIQUE (ts, ip, username, status)
             )
         """)
     conn.commit()
@@ -26,7 +27,17 @@ def insert_events(conn, events):
     with conn.cursor() as cur:
         for e in events:
             cur.execute(
-                "INSERT INTO events (ts, ip, username, status) VALUES (%s, %s, %s, %s)",
-                (e["timestamp"], e["ip"], e["username"], e["status"]),
+                """
+                INSERT INTO events (ts, ip, username, status)
+                VALUES (%s, %s, %s, %s)
+                ON CONFLICT (ts, ip, username, status) DO NOTHING
+                """,
+                (
+                    e["timestamp"],
+                    e["ip"],
+                    e["username"],
+                    e["status"],
+                ),
             )
     conn.commit()
+  

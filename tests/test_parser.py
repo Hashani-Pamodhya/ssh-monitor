@@ -36,5 +36,5 @@ def test_missing_file_does_not_crash():
 
 
 def test_parse_sample_file():
-    events = parse_file("sample_logs/auth.log")
+    events = parse_file("tests/data/test_auth.log")
     assert len(events) == 10
