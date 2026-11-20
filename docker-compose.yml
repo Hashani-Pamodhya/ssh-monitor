@@ -2,23 +2,35 @@ services:
   db:
     image: postgres:16
     environment:
-      POSTGRES_USER: monitor
-      POSTGRES_PASSWORD: monitor123
-      POSTGRES_DB: sshmon
+      POSTGRES_USER: ${DB_USER:-monitor}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in .env}
+      POSTGRES_DB: ${DB_NAME:-sshmon}
     ports:
       - "5432:5432"
     volumes:
       - dbdata:/var/lib/postgresql/data
-
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-monitor} -d ${DB_NAME:-sshmon}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
   grafana:
-    image: grafana/grafana:latest
+    image: grafana/grafana:11.5.2
     ports:
       - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-change-me}
+      DB_USER: ${DB_USER:-monitor}
+      DB_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in .env}
+      DB_NAME: ${DB_NAME:-sshmon}
     volumes:
       - grafanadata:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
     depends_on:
-      - db
-
+      db:
+        condition: service_healthy
 volumes:
   dbdata:
   grafanadata:
