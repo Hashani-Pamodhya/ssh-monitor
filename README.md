@@ -617,3 +617,17 @@ Security Alert
 ```
 
 The project combines **Kali Linux attack simulation, log analysis, brute-force detection, database storage, visualization, alerting, automated testing and continuous integration** into a practical defensive cybersecurity monitoring system.
+
+
+## Updated setup (improvements branch)
+
+1. Copy `.env.example` to `.env` and set strong, unique `DB_PASSWORD` and `GRAFANA_ADMIN_PASSWORD` values. Never commit `.env`.
+2. Install dependencies with `pip install -r requirements.txt`.
+3. Start the database and Grafana with `docker compose up -d`.
+4. Run the sample file once with `python main.py --log-file sample_logs/auth.log`.
+5. For continuous monitoring, run `python main.py --follow --log-file /var/log/auth.log` on the SSH server (or point it at the mounted/copied live log). The process must have permission to read the log.
+6. Open Grafana at `http://localhost:3000`. The PostgreSQL data source and dashboard are provisioned from the `grafana/` directory.
+
+The default detector policy in this branch is **at least 20 failed SSH logins from one IP within 5 minutes**. Change `SSH_FAILURE_THRESHOLD` and `SSH_WINDOW_MINUTES` in `.env` to customize it. The live follower reads appended lines; for production-grade rotation handling and reliable service operation, run it under a process supervisor and validate it against your target Linux distribution's log rotation behavior.
+
+Run tests with `python -m pytest -v`. CI installs dependencies from `requirements.txt` and runs the test suite. The repository changes have not yet been executed against your local WSL/Docker environment; verify the setup and Grafana panels before describing the live workflow as validated.
